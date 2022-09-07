@@ -1,3 +1,12 @@
-.app {
-  background-color: red;
+* {
+  background-color: turquoise;
+}
+
+.container {
+  border: solid 2px black;
+  padding: 10px 10px 10px 10px;
+  margin: 20px;
+}
+.container__header {
+  text-align: center;
 }

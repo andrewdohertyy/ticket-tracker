@@ -1,3 +1,24 @@
-* {
-  background-color: red;
+@use "./Components/Counter/Counter.scss";
+@use "./Components/Header/Header.scss";
+@use "./Components/Ticket/Ticket.scss";
+
+
+*{
+  background-color: turquoise;
+}
+
+.container {
+
+  border: solid 2px black;
+  padding: 10px 10px 10px 10px;
+  margin: 20px;
+  text-align: center;
+  
+  &__tickets {
+    display: grid;
+  }
+} 
+
+.tickets {
+  border: solid black;
 }

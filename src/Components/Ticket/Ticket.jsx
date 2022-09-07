@@ -7,7 +7,7 @@ const Ticket = (props) => {
 
   return (
     <div className='tickets'>
-        <h3 className='tickets__name'>{name}:</h3>
+        <h3 className='tickets__name'>{name}</h3>
         <h4 className='tickets__role'>{role}</h4>
         <div className='tickets__counter' ><Counter /></div>
       </div>

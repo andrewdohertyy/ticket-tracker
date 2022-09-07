@@ -6,10 +6,10 @@ const Ticket = (props) => {
   const { name, role } = props;
 
   return (
-    <div>
-        <h2>{name}</h2>
-        <h2>{role}</h2>
-        <div><Counter /></div>
+    <div className='tickets'>
+        <h3 className='tickets__name'>{name}:</h3>
+        <h4 className='tickets__role'>{role}</h4>
+        <div className='tickets__counter' ><Counter /></div>
       </div>
     )
   }

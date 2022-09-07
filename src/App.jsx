@@ -1,8 +1,7 @@
 import Header from "./Components/Header/Header";
 import Ticket from "./Components/Ticket/Ticket";
-import './App.scss';
 import teamArr from'./Data/team.js'
-
+import './App.scss';
 
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
 
 const ticketsJSX = teamArr.map((member) => {
   return (
-    <Ticket name={member.name} role={member.role} />
+    <Ticket name={member.name} role={member.role}/>
   )
 })
 

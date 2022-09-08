@@ -6,9 +6,50 @@ import Search from "./Components/Search/Search";
 import { useState } from "react";
 import './App.scss';
 
+
 function App() { 
 
+  const [array, setArray] = useState(teamArr);
 
+ const AddUser = () => {
+
+    const [name, setUser] = useState('')
+    const [role, setRole] = useState('')
+    const id = teamArr.length + 1
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const userAdd = {id, name, role}
+        teamArr.push(userAdd)
+        
+        let updatedArr = [...teamArr];
+        setArray(updatedArr);
+}       
+
+  return (
+
+
+    <div>
+        <fieldset className="newUser">
+            <legend>Add New User</legend>
+            <form onSubmit={handleSubmit} action="./Data/team">
+
+                Name: <input placeholder='First and Last Name' className="newUser__user" type="text"  
+                value={name} onChange={(e) => setUser(e.target.value)} />
+                <br/>
+
+                Role: <input placeholder='Job Title' className="newUser__role" type="text"  
+                value={role} onChange={(e) => setRole(e.target.value)} />
+                <br />
+
+
+                <button className="newUser__button">Add User</button>
+            </form>
+        </fieldset>
+    </div>
+  )
+}
 
 //maps over the teamArr and 
 const ticketsJSX = teamArr.map((member) => {

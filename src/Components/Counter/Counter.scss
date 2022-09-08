@@ -6,4 +6,16 @@
         background-color: black;
         border: solid white 0.5px;
     }
+    &__buttons:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    &__add:hover{
+        background-color: lightgreen;
+        color: black;
+    }
+    &__minus:hover{
+        background-color: red;
+        color: black;
+    }
 }

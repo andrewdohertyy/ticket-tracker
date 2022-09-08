@@ -1,6 +1,6 @@
 import Header from "./Components/Header/Header";
 import Ticket from "./Components/Ticket/Ticket";
-import AddUser from "./Components/AddUser/AddUser";
+//import AddUser from "./Components/AddUser/AddUser";
 import teamArr from './Data/team.js';
 import Search from "./Components/Search/Search";
 import { useState } from "react";
@@ -9,7 +9,7 @@ import './App.scss';
 
 function App() { 
 
-  const [array, setArray] = useState(teamArr);
+const [array, setArray] = useState(teamArr);
 
  const AddUser = () => {
 
@@ -30,16 +30,18 @@ function App() {
   return (
 
 
-    <div>
-        <fieldset className="newUser">
+    <div className="newUser">
+        <fieldset className="newUser__field">
             <legend>Add New User</legend>
-            <form onSubmit={handleSubmit} action="./Data/team">
+            <form className="newUser__form" onSubmit={handleSubmit} action="./Data/team">
 
-                Name: <input placeholder='First and Last Name' className="newUser__user" type="text"  
+                Name:  
+                <input placeholder='First and Last Name' className="newUser__user" type="text"  
                 value={name} onChange={(e) => setUser(e.target.value)} />
                 <br/>
 
-                Role: <input placeholder='Job Title' className="newUser__role" type="text"  
+                Role:  
+                <input placeholder='Job Title' className="newUser__role" type="text"  
                 value={role} onChange={(e) => setRole(e.target.value)} />
                 <br />
 

@@ -14,18 +14,36 @@
 
   border: solid 2px white;
   text-align: center;
-  padding: 10px 10px 10px 10px;
   margin: 5px;
   background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+
+  &__tickets {
+    margin-bottom: 20px;
+  }
+
 } 
 
+.newUser__field {
+        margin: 20px;
+        padding: 15px;
+        width: 200px;
+        margin:auto;
+        border: none;
+}
+
+.newUser__button:hover {
+  opacity: 0.8;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 768px) {
   .container {
 
     border: solid 2px white;
     padding: 10px;
-    margin: 20px;
+    margin: 5px;
     text-align: center;
     
     &__tickets {
@@ -33,10 +51,41 @@
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       padding: 10px;
       gap: 10px;
+      margin: 30px;
 
       
     }
   } 
+
+  .newUser {
+    padding: 10px;
+
+   &__field {
+
+    border: solid white 0.5px;
+    width: 20%;
+    margin:auto;
+    margin-bottom: 30px;
+   }
+
+    &__form {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__button {
+      width: 80px;
+      margin-left: 35px;
+    }
+  }
+
+  .search__field {
+    width:400px;
+    margin:auto;
+    border: solid white 0.5px;
+  }
 }
 
 

@@ -1,12 +1,92 @@
+.counter {
+  border: solid white 1px;
+  padding: 5px;
+}
+.counter__buttons {
+  background-color: black;
+  border: solid white 0.5px;
+}
+
+.header {
+  padding: 50px;
+}
+
+.tickets {
+  border: solid white 2px;
+  padding: 10px;
+  width: auto;
+}
+
+.newUser {
+  padding: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+.newUser__user {
+  background-color: black;
+}
+.newUser__role {
+  background-color: black;
+}
+.newUser__button {
+  background-color: black;
+}
+
+.search {
+  padding: 10px;
+}
+.search__button {
+  background-color: black;
+}
+.search__button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.search__input {
+  background-color: black;
+}
+.search__field {
+  width: auto;
+  margin: auto;
+}
+
 * {
-  background-color: turquoise;
+  color: white;
 }
 
 .container {
-  border: solid 2px black;
-  padding: 10px 10px 10px 10px;
-  margin: 20px;
-}
-.container__header {
+  border: solid 2px white;
   text-align: center;
+  margin: 5px;
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+.newUser {
+  width: 100px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    border: solid 2px white;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+  }
+  .container__tickets {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 50px;
+    gap: 10px;
+  }
+
+  .newUser {
+    width: 400px;
+    margin: auto;
+  }
+
+  .search__field {
+    width: 400px;
+    margin: auto;
+  }
 }

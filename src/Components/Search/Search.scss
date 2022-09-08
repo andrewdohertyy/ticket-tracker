@@ -1,10 +1,21 @@
 .search {
     padding: 10px;
-
+  
     &__button {
         background-color: black;
     }
+    &__button:hover {
+        opacity: 0.8;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
     &__input {
         background-color: black;
+    }
+    &__field {
+        width:auto;
+        margin:auto;
+        border: none;
     }
 }

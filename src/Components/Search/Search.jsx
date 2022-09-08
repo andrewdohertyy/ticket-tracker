@@ -5,7 +5,7 @@ const Search = () => {
     <fieldset className="search__field">
         <legend>Search</legend>
     <form className="search" action="search">
-        <input placeholder='Search' className="search__input" type="text" />
+        <input className="search__input" type="text" />
         <button className="search__button">Search</button>
     </form>
     </fieldset>

@@ -1,30 +1,15 @@
 import React from 'react'
-import teamArr from'../../Data/team.js'
-import Ticket from '../../Components/Ticket/Ticket';
-import { useState } from 'react'
 
 const Search = () => {
-
-    let [search, setSearch] = useState("")
-
   return (
-    <div>
-        <input type="text" />
-        {teamArr.filter((value) => {
-            if (search = "") {
-                return value
-            } else if (value.name.toLowerCase().includes(search.toLowerCase())) {
-                return value
-            }
-        }).map((value, key) => {
-            return (
-                <Ticket />
-            )
-        })}
-
-    </div>
+    <fieldset className="search__field">
+        <legend>Search</legend>
+    <form className="search" action="search">
+        <input placeholder='Search' className="search__input" type="text" />
+        <button className="search__button">Search</button>
+    </form>
+    </fieldset>
   )
 }
 
 export default Search
-

@@ -1,0 +1,9 @@
+.counter {
+    border: solid white 1px;
+    padding: 5px;
+
+    &__buttons {
+        background-color: black;
+        border: solid white 0.5px;
+    }
+}

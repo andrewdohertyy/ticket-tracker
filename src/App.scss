@@ -1,35 +1,38 @@
 @use "./Components/Counter/Counter.scss";
 @use "./Components/Header/Header.scss";
 @use "./Components/Ticket/Ticket.scss";
+@use "./Components/AddUser/AddUser.scss";
 
 
 *{
-  background-color: turquoise;
+  color: white;
+
 }
 
 .container {
 
-  border: solid 2px black;
-  padding: 10px 10px 10px 10px;
-  margin: 20px;
+  border: solid 2px white;
   text-align: center;
-  
+  padding: 10px 10px 10px 10px;
+  margin: 5px;
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
 } 
 
 
 @media screen and (min-width: 768px) {
   .container {
 
-    border: solid 2px black;
-    padding: 10px 10px 10px 10px;
+    border: solid 2px white;
+    padding: 10px;
     margin: 20px;
     text-align: center;
     
     &__tickets {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr ;
-      gap: 5px;
+      padding: 10px;
+      gap: 10px;
+
       
     }
   } 

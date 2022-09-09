@@ -12,7 +12,6 @@ import './App.scss';
 function App() { 
 
 
-
 const [array, setArray] = useState(teamArr);
 //adds new users with the form below
  const AddUser = () => {
@@ -32,8 +31,6 @@ const [array, setArray] = useState(teamArr);
 }       
 
   return (
-
-
     <div className="newUser">
         <fieldset className="newUser__field">
             <legend>Add New User</legend>
@@ -48,7 +45,7 @@ const [array, setArray] = useState(teamArr);
                 <input placeholder='Job Title' className="newUser__role" type="text"  
                 value={role} onChange={(e) => setRole(e.target.value)} />
                 <br />
-
+                
 
                 <button className="newUser__button">Add User</button>
             </form>
@@ -56,6 +53,7 @@ const [array, setArray] = useState(teamArr);
     </div>
   )
 }
+
 
 //maps over the teamArr and adds a counter and name/role to the tickets
 const ticketsJSX = teamArr.map((member) => {

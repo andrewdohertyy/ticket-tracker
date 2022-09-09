@@ -1,12 +1,14 @@
 import React from 'react'
 import { useState } from "react";
 
-
+//counter function to be used within the tickets
 const Counter = () => {
 
 
 let [counter, setCounter] = useState(0)
 
+
+//add and take functions for the counter
 const add = () => {
   if (counter >= 0 )
     setCounter(counter + 1);

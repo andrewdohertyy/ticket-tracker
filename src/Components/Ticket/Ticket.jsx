@@ -1,6 +1,8 @@
 import React from 'react'
 import Counter from "../../Components/Counter/Counter";
 
+
+//ticket layout with props from App.jsx
 const Ticket = (props) => {
 
   const { name, role } = props;

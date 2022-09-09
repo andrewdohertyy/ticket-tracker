@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+//layout for the search form
 const Search = () => {
   return (
     <fieldset className="search__field">

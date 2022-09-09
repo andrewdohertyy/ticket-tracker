@@ -7,10 +7,14 @@ import { useState } from "react";
 import './App.scss';
 
 
+
+//place to store the functions the app will need
 function App() { 
 
-const [array, setArray] = useState(teamArr);
 
+
+const [array, setArray] = useState(teamArr);
+//adds new users with the form below
  const AddUser = () => {
 
     const [name, setUser] = useState('')
@@ -53,16 +57,15 @@ const [array, setArray] = useState(teamArr);
   )
 }
 
-//maps over the teamArr and 
+//maps over the teamArr and adds a counter and name/role to the tickets
 const ticketsJSX = teamArr.map((member) => {
   return (
     <Ticket name={member.name} role={member.role} key={member.id}/>
   )
 })
-
+  //what the layout of the website will look like
   return (
     <div className="app">
-
       <div className="container">
           <Header className="container__header"/>
           <Search />
@@ -73,9 +76,7 @@ const ticketsJSX = teamArr.map((member) => {
         <div>
           <AddUser/>
         </div>
-
       </div>
-
     </div>
   );
 }

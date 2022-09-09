@@ -16,10 +16,7 @@ I used MAP, state and props to help me achieve the goal as well as writing a pla
 
 To run the app you can click on the plus/minus buttons to change the counter and then use the add user function to add more tickets.
 
-Going forward i will need to refactor my code in App.jsx and use a mix of state and props to store the add function in its own component.
-The add function does work however the code could be nicer and more efficient.
-
-As well as this to get the search function to work, i will continue to work on these in my free time.
+Next steps are to get the search function to work, i will continue to work on these in my free time.
 
 Andrew Doherty
 9/9/22 </p>

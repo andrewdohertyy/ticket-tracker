@@ -1,6 +1,6 @@
 import Header from "./Components/Header/Header";
 import Ticket from "./Components/Ticket/Ticket";
-//import AddUser from "./Components/AddUser/AddUser";
+import AddUser from "./Components/AddUser/AddUser";
 import teamArr from './Data/team.js';
 import Search from "./Components/Search/Search";
 import { useState } from "react";
@@ -11,49 +11,28 @@ import './App.scss';
 //place to store the functions the app will need
 function App() { 
 
-
 const [array, setArray] = useState(teamArr);
+const [name, setUser] = useState('')
+const [role, setRole] = useState('')
+
+
 //adds new users with the form below
- const AddUser = () => {
-
-    const [name, setUser] = useState('')
-    const [role, setRole] = useState('')
-    const id = teamArr.length + 1
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const userAdd = {id, name, role}
-        teamArr.push(userAdd)
-        
-        let updatedArr = [...teamArr];
-        setArray(updatedArr);
-}       
-
-  return (
-    <div className="newUser">
-        <fieldset className="newUser__field">
-            <legend>Add New User</legend>
-            <form className="newUser__form" onSubmit={handleSubmit} action="./Data/team">
-
-                Name:  
-                <input placeholder='First and Last Name' className="newUser__user" type="text"  
-                value={name} onChange={(e) => setUser(e.target.value)} />
-                <br/>
-
-                Role:  
-                <input placeholder='Job Title' className="newUser__role" type="text"  
-                value={role} onChange={(e) => setRole(e.target.value)} />
-                <br />
-                
-
-                <button className="newUser__button">Add User</button>
-            </form>
-        </fieldset>
-    </div>
-  )
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const id = teamArr.length + 1
+  const userAdd = {id, name, role}
+  teamArr.push(userAdd)
+  let updatedArr = [...teamArr];
+  setArray(updatedArr);
 }
 
+  const setUserName = (e) => {
+    setUser(e.target.value)
+  }
+  const setUserRole = (e) => {
+    setRole(e.target.value)
+  }
+  
 
 //maps over the teamArr and adds a counter and name/role to the tickets
 const ticketsJSX = teamArr.map((member) => {
@@ -72,7 +51,7 @@ const ticketsJSX = teamArr.map((member) => {
           {ticketsJSX}
         </div>
         <div>
-          <AddUser/>
+            <AddUser handleSubmit={handleSubmit} setUserName={setUserName} setUserRole={setUserRole} />
         </div>
       </div>
     </div>
